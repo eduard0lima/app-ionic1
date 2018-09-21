@@ -5,17 +5,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -27,24 +16,36 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js" ></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-    <script src="js/controller.js"></script>
+    <script src="js/controllers/listagem.controller.js" ></script>
+    <script src="js/controllers/carroEscolhido.controller.js" ></script>
+    <script src="js/controllers/finalizarPedido.controller.js" ></script>
+    <script src="js/controllers/login.controller.js" ></script>
+    <script src="js/controllers/menu.controller.js" ></script>
+    <script src="js/controllers/perfil.controller.js" ></script>
+    <script src="js/controllers/agendamentos.controller.js" ></script>
+
     <script src="js/routes.js"></script>
+    <script src="js/service.js"></script>
+
+    <script src="js/database.value.js" ></script>
+    <script src="lib/angular-br-filters/release/angular-br-filters.min.js"></script>
+    <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js" ></script>
+    <script src="lib/angular-i18n/angular-locale_pt-br.js" ></script>
 
   </head>
-  <body ng-app="starter" ng-controller="ListagemController">
-
+  <body ng-app="starter">
     <ion-pane>
       <ion-nav-view>
-        <ion-nav-bar></ion-nav-bar>
       </ion-nav-view>
-
+      
       <ion-footer-bar class="bar-stable">
-        <h1 class="title">Rua Verdeiro, 145</h1>     
-      </ion-footer-bar>      
+        <h1 class="title">SUS | PROADI-SUS | Oswaldo Cruz</h1>
+      </ion-footer-bar>
     </ion-pane>
   </body>
 </html>
