@@ -8,6 +8,10 @@ angular.module('starter')
 			url: '/listagem',
 			templateUrl : 'templates/listagem.html',
 			controller : 'ListagemController'
+		}).state('carroescolhido', {
+			url: '/carroescolhido',
+			templateUrl : 'templates/carroescolhido.html',
+			controller : 'CarroEscolhidoController'
 		});
 
 });
