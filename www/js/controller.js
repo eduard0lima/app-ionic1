@@ -39,3 +39,21 @@ angular.module('starter')
 	};
 
 });
+
+angular.module('starter')
+.controller('FinalizarPedidoController', function($stateParams, $scope, $ionicPopup, $state) {
+
+	$scope.carroFinalizado = angular.fromJson($stateParams.carro);
+
+	$scope.finaliarPedido = function () {
+
+		$ionicPopup.alert({
+		    title: 'Parabéns!',
+		    template: 'Você acaba de comprar um carro.'
+	    }).then(function () {
+	    	$state.go('listagem');
+	    });
+
+	}
+
+});
