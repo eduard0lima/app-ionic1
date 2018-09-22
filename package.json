@@ -9,5 +9,17 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "cordova-plugin-ionic": "^5.2.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-ionic": {
+        "APP_ID": "9655da15",
+        "CHANNEL_NAME": "Master",
+        "UPDATE_METHOD": "background"
+      }
+    }
   }
 }
