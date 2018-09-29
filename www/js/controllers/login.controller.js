@@ -1,19 +1,24 @@
+(function () {
 
-angular.module('starter')
-.controller('LoginController', function($http, $scope, CarroService, $ionicPopup, $state, $rootScope){
+	'use strict';
 
-	$scope.login = {};
+	angular.module('starter')
+		.controller('LoginController', function ($http, $scope, CarroService, $ionicPopup, $state, $rootScope) {
 
-	$scope.realizarLogin = function(){
+			$scope.login = {};
 
-		$rootScope.usuario = {
-			cns : $scope.login.cns,
-			senha : $scope.login.senha
-		};
-		
-		$state.go('app.listagem');
+			$scope.realizarLogin = function () {
 
-	}
+				$rootScope.usuario = {
+					//cns: $scope.login.cns,
+					cns: '898002726316109',
+					senha: $scope.login.senha
+				};
+
+				$state.go('app.listagem');
+
+			}
 
 
-});
+		});
+})();

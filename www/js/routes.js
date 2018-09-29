@@ -12,6 +12,17 @@ $stateProvider
 	controller: 'MenuController'
 })
 
+.state('app.registros-clinicos', {
+	url : '/registros-clinicos',
+	views : {
+		'menuContent' : {
+			templateUrl : 'templates/registros-clinicos.html',
+			controller : 'RegistrosClinicosController',
+			controllerAs : 'vm'
+		}
+	}
+})
+
 .state('app.perfil', {
 	url : '/perfil',
 	views : {

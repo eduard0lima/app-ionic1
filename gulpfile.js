@@ -1,27 +1,27 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cleanCss = require('gulp-clean-css');
-var rename = require('gulp-rename');
+import { task, src, dest, watch } from 'gulp';
+import sass, { logError } from 'gulp-sass';
+import cleanCss from 'gulp-clean-css';
+import rename from 'gulp-rename';
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass']);
+task('default', ['sass']);
 
-gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+task('sass', function(done) {
+  src('./scss/ionic.app.scss')A
     .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(gulp.dest('./www/css/'))
+    .on('error', logError)
+    .pipe(dest('./www/css/'))
     .pipe(cleanCss({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(dest('./www/css/'))
     .on('end', done);
 });
 
-gulp.task('watch', ['sass'], function() {
-  gulp.watch(paths.sass, ['sass']);
+task('watch', ['sass'], function() {
+  watch(paths.sass, ['sass']);
 });

@@ -25,23 +25,5 @@ angular.module('starter', ['ionic', 'idf.br-filters', 'ngCordova', 'ionic-datepi
     DatabaseValues.bancoDeDados.transaction(function(transacao){
       transacao.executeSql('CREATE TABLE IF NOT EXISTS agendamentos (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,nome VARCHAR(300), endereco VARCHAR(300), email VARCHAR(300), dataAgendamento VARCHAR(40), modelo VARCHAR(100), preco VARCHAR(50), confirmado BOOLEAN);', [])
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   });
 })

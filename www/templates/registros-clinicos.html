@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-nav-title>Registros clínicos</ion-nav-title>
+  <ion-content>
+    <!--
+    <div class="list">
+
+      <a class="item item-thumbnail-left" ng-repeat="registro in vm.registrosClinicos" href="#/app/registros-clinicos/{{registro.id}}">
+        <img src="cover.jpg">
+        <h2>{{ ::registro.data | date : 'dd/MM/yyyy HH:mm:ss' }}</h2>
+        <p>{{ ::registro.tipo }}</p>
+      </a>
+
+    </div>-->
+    <ion-list>
+      <ion-item ng-repeat="registro in vm.registrosClinicos" href="#/app/registros-clinicos/{{registro.id}}">
+        <h2>{{ ::registro.data | date : 'dd/MM/yyyy HH:mm:ss' }}</h2>
+        <p>{{ ::registro.instituicao }}</p>
+        <p>{{ ::registro.autor }}</p>
+        <p>{{ ::registro.cns }}</p>
+        <p>{{ ::registro.cbo }}</p>
+        <p>{{ ::registro.tipo }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
